@@ -1,4 +1,8 @@
 .MainLoginContent{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   background-color: deepskyblue;
   color: red;
   width: 100%;

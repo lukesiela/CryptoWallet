@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "semantic-ui-react";
 import Form from "../../components/Form";
 import Input from "../../components/Input";
+import Button from "../../components/Button";
 import "./Login.scss";
 
 function Login({loginString}) {
@@ -20,6 +21,15 @@ function Login({loginString}) {
                         <Input
                             label="Email"
                         />
+                        <Input
+                            label="Username"
+                        />
+                        <Input
+                            label="Password"
+                        />
+                        <Button>
+                            Register Now!
+                        </Button>
                     </Form>
                 </div>
             </Grid.Column>
