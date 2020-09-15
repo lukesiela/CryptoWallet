@@ -1,5 +1,17 @@
-import { post } from "../Api";
+import { useDispatch } from "react-redux";
+import { performRegistration} from "../../store/users/actions";
 
-export const submitRegistration = (url = "http://127.0.0.1:5000/new-user", body) => {
-    return post(url, body).then(response => response.json()).catch(error => console.log(error));
+export default () => {
+    const dispatch = useDispatch();
+
+    const registerUser = (url, body) => {
+        const filteredBody = {
+            ...body,
+            api_key: "15c97b04fd8ebe0d590455aeba453c50",
+            timestamp: Date.now(),
+        }
+        dispatch(performRegistration(url, filteredBody))
+    }
+
+    return { registerUser, }
 }

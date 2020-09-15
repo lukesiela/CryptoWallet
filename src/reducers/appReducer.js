@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import userReducer from "../store/users/usersReducer";
+import userReducer from "../store/requests/requestsReducer";
 
 const appReducer = combineReducers({ userReducer, });
 

@@ -1,2 +1,14 @@
-export const SEND_CREATE_USER_REQUEST = "SEND_CREATE_USER_REQUEST";
-export const RECEIVE_CREATE_USER_REQUEST = "RECEIVE_CREATE_USER_REQUEST";
+import {
+    sendRegistrationRequest,
+    receiveRegistrationResponse,
+} from "../requests/actions";
+import { post } from "../../lib/Api";
+
+export function performRegistration(url, body) {
+    return dispatch => {
+        dispatch(sendRegistrationRequest(body));
+        return post(url, body).then(({ status }) => {
+            dispatch(receiveRegistrationResponse(status))
+        })
+    }
+}

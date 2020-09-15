@@ -14,11 +14,12 @@ export default function users(state = initialState, action){
             return {
                 ...state,
                 loggingIn: true,
+                ...action.body,
             }
         case RECEIVE_CREATE_USER_REQUEST:
             return {
                 ...state,
-                ...action.response,
+                ...action.status,
                 loggedIn: true,
                 loggingIn: false,
             }

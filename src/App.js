@@ -1,12 +1,22 @@
 import React from 'react';
 import Login from "./layouts/Login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+      <Router>
+          <div className="App">
+              <Switch>
+                  <Route path="/">
+                      <Login />
+                  </Route>
+                  <Route path="/home">
+
+                  </Route>
+              </Switch>
+          </div>
+      </Router>
   );
 }
 
