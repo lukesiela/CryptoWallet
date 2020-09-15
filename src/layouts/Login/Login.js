@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
+import "semantic-ui-css/components/grid.css";
 import Form from "../../components/Form";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -15,7 +16,7 @@ function Login({
   const { first_name, last_name, user_name, password, email } = formData;
   return (
     <Grid columns={1}>
-      <Grid.Column width={8}>
+      <Grid.Column width={16}>
         <div className="MainLoginContent">
           {loginString}
           <Form>

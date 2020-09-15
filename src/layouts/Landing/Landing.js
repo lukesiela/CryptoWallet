@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
+import "semantic-ui-css/components/grid.css";
 
 function Landing() {
   return (
@@ -9,20 +10,20 @@ function Landing() {
           <div style={{ backgroundColor: "red" }}>TOP TOP TEXT</div>
         </Grid.Column>
       </Grid.Row>
-      <Grid.Row>
+      <Grid.Row style={{height: "100vh"}}>
         <Grid.Column width={3}>
-          <div style={{ backgroundColor: "orange" }}>LEFT TEXT</div>
+          <div style={{ backgroundColor: "orange", height: "100%", }}>LEFT TEXT</div>
         </Grid.Column>
         <Grid.Column width={8}>
-          <Grid.Row>
-            <div style={{ backgroundColor: "purple" }}>LEFT TEXT</div>
+          <Grid.Row style={{height: "20%"}}>
+            <div style={{ backgroundColor: "purple", height: "100%"}}>LEFT TEXT</div>
           </Grid.Row>
-          <Grid.Row>
-            <div style={{ backgroundColor: "deepskyblue" }}>LEFT TEXT</div>
+          <Grid.Row style={{height: "80%",}}>
+            <div style={{ backgroundColor: "deepskyblue", height: "100%"}}>LEFT TEXT</div>
           </Grid.Row>
         </Grid.Column>
         <Grid.Column width={3}>
-          <div style={{ backgroundColor: "green" }}>RIGHT TEXT</div>
+          <div style={{ backgroundColor: "green", height: "100%", }}>RIGHT TEXT</div>
         </Grid.Column>
       </Grid.Row>
     </Grid>
